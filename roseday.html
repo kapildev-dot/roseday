@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rose Day Love Journey 🌹💖</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Full-screen effects layer -->
+  <div id="extra-effects" class="hidden"></div>
+
+  <!-- Continuous falling roses + hearts -->
+  <div class="falling-items" id="fallingItems"></div>
+
+  <div class="container">
+    <h1 class="title">Happy Rose Day 🌹💕</h1>
+
+    <!-- Name Input -->
+    <div id="name-screen" class="screen">
+      <h2>Tera sweet naam batao jaan? 😍</h2>
+      <input type="text" id="userName" placeholder="Naam likho..." autocomplete="off" />
+      <button class="btn primary" onclick="startGame()">Shuru Karo ❤️</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+      <h2 id="greeting" class="greeting"></h2>
+      <p id="status-msg" class="status">Rose paane ke liye thoda sa pyar dikhao na 😏🌹</p>
+      <div id="mini-game-area" class="game-area"></div>
+      <button id="shareBtn" class="btn share hidden" onclick="shareGame()">Ise Apni Jaan ke saath Share Karo 💌</button>
+    </div>
+
+    <!-- Final Decision Popup -->
+    <div id="final-popup" class="popup hidden">
+      <div class="popup-content">
+        <h2 id="final-msg" class="final-text"></h2>
+        <div class="buttons">
+          <button class="btn yes" onclick="yesClick()">YES 💖🌹</button>
+          <button class="btn no" onclick="rejectRose()">NAHI 😏</button>
+        </div>
+        <div id="manane-area" class="manane"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Music -->
+  <audio id="bgMusic" loop>
+    <!-- Romantic loop - Pixabay se latest example, change kar lena better ke liye -->
+    <source src="rose.mp3" type="audio/mpeg">
+    <!-- Search "romantic instrumental loop" on pixabay.com/music aur direct mp3 link daal dena -->
+  </audio>
+  <button id="muteBtn" class="mute-btn" onclick="toggleMusic()">🔊</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
